@@ -1,0 +1,25 @@
+#define LEDred 4
+#define LEDyellow 12
+
+void setup() {
+  //Setup all the aurduino pins
+  
+ pinMode(LEDred, OUTPUT);
+ pinMode(LEDyellow, OUTPUT);
+ 
+ //provide power to both LEDs
+ digitalWrite(LEDred, HIGH);
+ digitalWrite(LEDyellow, HIGH);
+ 
+}
+
+void loop() {
+  digitalWrite(4, HIGH); //red LED on, Yellow LED off
+  delay(1000);
+  digitalWrite(4, LOW); //Yellow LED on ,Green LED off  
+  delay(1000);
+  digitalWrite(12, HIGH);// relay 3 switches to NO
+  delay(1000);
+  digitalWrite(12, LOW);//relay 3 switches to NC
+  delay(1000);
+}
